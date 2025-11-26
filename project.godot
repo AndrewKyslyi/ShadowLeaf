@@ -10,13 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Hi"
+config/name="Shadow Leaf"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
 [dotnet]
 
-project/assembly_name="Hi"
+project/assembly_name="Shadow Leaf"
 
 [rendering]
 
