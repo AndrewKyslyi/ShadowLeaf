@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://de24uukqf3euq"]
+[gd_scene load_steps=6 format=3 uid="uid://de24uukqf3euq"]
 
 [ext_resource type="PackedScene" uid="uid://gejhkco15ggg" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://88sj4axwaxkb" path="res://assets/map/mainlevbuild.png" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="3_lnu2h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -1034,6 +1035,16 @@ texture = ExtResource("2_yqjtg")
 sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
 [node name="Game" type="Node2D"]
+
+[node name="Controller" type="CanvasLayer" parent="."]
+
+[node name="Virtual Joystick movement" parent="Controller" instance=ExtResource("3_lnu2h")]
+top_level = true
+offset_top = -300.0
+offset_bottom = 0.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 top_level = true
